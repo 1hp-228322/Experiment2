@@ -12,7 +12,6 @@
     <Folder Include="AppStyle\" />
     <Folder Include="Core\" />
     <Folder Include="Images\" />
-    <Folder Include="View\" />
   </ItemGroup>
 
   <ItemGroup>
