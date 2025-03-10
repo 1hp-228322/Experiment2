@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using Experiment2.Core;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -19,6 +20,16 @@ namespace Experiment2
         public MainWindow()
         {
             InitializeComponent();
+            ConnectionCore.CoreFrame = MainFrame;
+            MainFrame.Navigate(new MainPage());
+        }
+
+        private void Window_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            if(e.ClickCount == 2)
+            {
+                Application.Current.Shutdown();
+            }
         }
     }
 }
