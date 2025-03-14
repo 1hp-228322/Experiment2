@@ -24,5 +24,7 @@ namespace Experiment2.View.Pages.PageTask
         {
             InitializeComponent();
         }
+
     }
+
 }

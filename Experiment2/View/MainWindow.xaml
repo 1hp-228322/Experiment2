@@ -18,5 +18,10 @@
     <Grid>
         <Frame x:Name="MainFrame"
                NavigationUIVisibility="Hidden"/>
+
+        <Image Grid.ColumnSpan="2"
+           Source="/Images/ai_g_img_2025-03-14_1741972070942_316.png"
+           Stretch="UniformToFill"/>
+
     </Grid>
 </Window>

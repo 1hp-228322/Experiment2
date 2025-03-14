@@ -17,9 +17,7 @@
             <RowDefinition Height="1*" />
         </Grid.RowDefinitions>
 
-        <Image Grid.RowSpan="3"
-               Source="/Images/main_bg.jpg"
-               Stretch="UniformToFill"/>
+        
 
         <Border Grid.Row="0"
                 HorizontalAlignment="Center"
@@ -28,7 +26,7 @@
                 Width="500"
                 Height="100"
                 CornerRadius="15"
-                Effect="{StaticResource MaterialDesignElevationShadow1}">
+                Effect="{StaticResource MaterialDesignShadowDepth1}">
 
             <StackPanel HorizontalAlignment="Center"
                         VerticalAlignment="Center">
@@ -46,7 +44,7 @@
                 Width="800"
                 Height="150"
                 CornerRadius="15"
-                Effect="{StaticResource MaterialDesignElevationShadow1}">
+                Effect="{StaticResource MaterialDesignShadowDepth1}">
             <StackPanel HorizontalAlignment="Center"
                         VerticalAlignment="Center">
                 <TextBlock Text="по УП 01.01: "

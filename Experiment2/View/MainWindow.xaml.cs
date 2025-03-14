@@ -1,4 +1,5 @@
 ﻿using Experiment2.Core;
+using Experiment2.View.Pages;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;

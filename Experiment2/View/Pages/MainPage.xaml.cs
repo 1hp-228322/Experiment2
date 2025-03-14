@@ -26,7 +26,7 @@ namespace Experiment2.View.Pages
             InitializeComponent();
         }
 
-        private void BtnTask_click(object sender, RotedEvenArgs e)
+        private void BtnTask_click(object sender, RoutedEventArgs e)
         {
             ConnectionCore.CoreFrame?.Navigate(new TaskPage());
         }
