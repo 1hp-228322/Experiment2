@@ -4,11 +4,196 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Experiment2.View.Pages.PageTask"
-      mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
-      Title="Page1">
+     xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      mc:Ignorable="d"
+      d:DesignHeight="700"
+      d:DesignWidth="900"
+      FontFamily="Consolas">
 
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Image Grid.ColumnSpan="2"
+               Source="/Images/ai_g_img_2025-03-14_1741972070942_316.png"
+               Stretch="UniformToFill"/>
+
+        <Border Grid.Column="0"
+                Background="#FDFDFD"
+                CornerRadius="15"
+                Width="150"
+                Height="600"
+                Margin="10,50,290,50">
+        </Border>
+
+        <Border
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Margin="225,10,0,0"
+                Width="650"
+                Height="150"
+                Background="#087373"
+                CornerRadius="15"
+                Padding="5"
+                Effect="{StaticResource MaterialDesignElevationShadow1}" Grid.ColumnSpan="2">
+            <StackPanel HorizontalAlignment="Left"
+                        VerticalAlignment="Center">
+                <TextBlock Text="Задание 1 - Создать класс с именем Address."
+                           FontSize="20"
+                           TextWrapping="Wrap"
+                           Foreground="White"
+                           FontWeight="SemiBold"/>
+            </StackPanel>
+        </Border>
+
+        <Border
+                CornerRadius="15"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Background="#087373"
+                Effect="{StaticResource MaterialDesignElevationShadow1}"
+                Width="450"
+                Height="300"
+                Margin="306,249,0,0" Grid.ColumnSpan="2">
+            <StackPanel HorizontalAlignment="Center"
+                        VerticalAlignment="Center">
+
+                <StackPanel Orientation="Horizontal">
+                    <materialDesign:PackIcon Kind="CityVariant"
+                                             Margin="0 0 3 0"
+                                             VerticalAlignment="Center"
+                                             Foreground="White"
+                                             Width="25"
+                                             Height="25"/>
+                    <TextBox Width="280"
+                             Foreground="White"
+                             FontSize="20"
+                             x:Name="TbIndex"
+                             materialDesign:HintAssist.Hint="Введите почтовый индекс"
+                             materialDesign:TextFieldAssist.HasClearButton="True"
+                             materialDesign:TextFieldAssist.UnderlineBrush="White"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal"
+                            Margin="0 5 0 0">
+                    <materialDesign:PackIcon Kind="Map"
+                                             Margin="0 0 3 0"
+                                             VerticalAlignment="Center"
+                                             Foreground="White"
+                                             Width="25"
+                                             Height="25"/>
+                    <TextBox Width="280"
+                             Foreground="White"
+                             FontSize="20"
+                             x:Name="TbCountry"
+                             materialDesign:HintAssist.Hint="Введите страну"
+                             materialDesign:TextFieldAssist.HasClearButton="True"
+                             materialDesign:TextFieldAssist.UnderlineBrush="White"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal"
+                            Margin="0 5 0 0">
+                    <materialDesign:PackIcon Kind="City"
+                                             Margin="0 0 3 0"
+                                             VerticalAlignment="Center"
+                                             Foreground="White"
+                                             Width="25"
+                                             Height="25"/>
+                    <TextBox Width="280"
+                             Foreground="White"
+                             FontSize="20"
+                             x:Name="TbCity"
+                             materialDesign:HintAssist.Hint="Введите город"
+                             materialDesign:TextFieldAssist.HasClearButton="True"
+                             materialDesign:TextFieldAssist.UnderlineBrush="White"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal"
+                            Margin="0 5 0 0">
+                    <materialDesign:PackIcon Kind="Electricity"
+                                             Margin="0 0 3 0"
+                                             VerticalAlignment="Center"
+                                             Foreground="White"
+                                             Width="25"
+                                             Height="25"/>
+                    <TextBox Width="280"
+                             Foreground="White"
+                             FontSize="20"
+                             x:Name="TbStreet"
+                             materialDesign:HintAssist.Hint="Введите улицу"
+                             materialDesign:TextFieldAssist.HasClearButton="True"
+                             materialDesign:TextFieldAssist.UnderlineBrush="White"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal"
+                            Margin="0 5 0 0">
+                    <materialDesign:PackIcon Kind="House"
+                                             Margin="0 0 3 0"
+                                             VerticalAlignment="Center"
+                                             Foreground="White"
+                                             Width="25"
+                                             Height="25"/>
+                    <TextBox Width="280"
+                             Foreground="White"
+                             FontSize="20"
+                             x:Name="TbHouse"
+                             materialDesign:HintAssist.Hint="Введите номер дома"
+                             materialDesign:TextFieldAssist.HasClearButton="True"
+                             materialDesign:TextFieldAssist.UnderlineBrush="White"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal"
+                            Margin="0 5 0 0">
+                    <materialDesign:PackIcon Kind="CameraPartyMode"
+                                             Margin="0 0 3 0"
+                                             VerticalAlignment="Center"
+                                             Foreground="White"
+                                             Width="25"
+                                             Height="25"/>
+                    <TextBox Width="280"
+                             Foreground="White"
+                             FontSize="20"
+                             x:Name="TbApartment"
+                             materialDesign:HintAssist.Hint="Введите номер квартиры"
+                             materialDesign:TextFieldAssist.HasClearButton="True"
+                             materialDesign:TextFieldAssist.UnderlineBrush="White"/>
+                </StackPanel>
+
+                <!-- Кнопка "Получить данные" -->
+                <Button Background="#087373"
+                        Foreground="White"
+                        x:Name="BtnGetData"
+                        Click="BtnGetData_Click"
+                        Margin="0 10 0 0"
+                        Style="{StaticResource MaterialDesignRaisedButton}"
+                        materialDesign:ButtonProgressAssist.Value="-1"
+                        materialDesign:ButtonProgressAssist.IndicatorForeground="White"
+                        materialDesign:ButtonProgressAssist.IsIndicatorVisible="True"
+                        materialDesign:ButtonProgressAssist.IsIndeterminate="True"
+                        Height="40">
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="Check"
+                                                  Margin="0 0 3 0"
+                                                  Width="25"
+                                                  Height="25"/>
+                        <TextBlock Text="Получить данные"
+                                   FontSize="20"
+                                   VerticalAlignment="Center">
+                            <TextBlock.Style>
+                                <Style TargetType="TextBlock">
+                                    <Style.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter Property="TextDecorations" Value="Underline" />
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </TextBlock.Style>
+                        </TextBlock>
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+        </Border>
     </Grid>
 </Page>
