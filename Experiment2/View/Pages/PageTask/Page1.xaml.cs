@@ -18,9 +18,6 @@ using Experiment2;
 
 namespace Experiment2.View.Pages.PageTask
 {
-    /// <summary>
-    /// Логика взаимодействия для Page1.xaml
-    /// </summary>
     public partial class Page1 : Page
     {
         public Page1()
@@ -89,40 +86,5 @@ namespace Experiment2.View.Pages.PageTask
                                 MessageBoxButton.OK,
                                 MessageBoxImage.Error);
             }
-            else
-            {
-                Address address = new()
-                {
-                    Index = Convert.ToInt32(TbIndex.Text),
-                    Country = TbCountry.Text,
-                    City = TbCity.Text,
-                    Street = TbStreet.Text,
-                    House = TbHouse.Text,
-                    Apartment = TbApartment.Text
-                };
 
-                MessageBox.Show($"Почтовый индекс - {address.Index}\n" +
-                                $"Страна - {address.Country}\n" +
-                                $"Город - {address.City}\n" +
-                                $"Улица - {address.Street}\n" +
-                                $"Дом - {address.House}\n" +
-                                $"Квартира - {address.Apartment}",
-                                "Задание 1",
-                                MessageBoxButton.OK,
-                                MessageBoxImage.Information);
 
-                ClearFields();
-            }
-        }
-
-        private void ClearFields()
-        {
-            Tbi.Text = string.Empty;
-            TbCountry.Text = string.Empty;
-            TbCity.Text = string.Empty;
-            TbStreet.Text = string.Empty;
-            TbHouse.Text = string.Empty;
-            TbApartment.Text = string.Empty;
-        }
-    }
-}
