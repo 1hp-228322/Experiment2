@@ -13,6 +13,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Experiment2.View;
+using Experiment2;
 
 namespace Experiment2.View.Pages.PageTask
 {
@@ -115,7 +117,7 @@ namespace Experiment2.View.Pages.PageTask
 
         private void ClearFields()
         {
-            TbIndex.Text = string.Empty;
+            Tbi.Text = string.Empty;
             TbCountry.Text = string.Empty;
             TbCity.Text = string.Empty;
             TbStreet.Text = string.Empty;

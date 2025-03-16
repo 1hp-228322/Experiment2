@@ -4,7 +4,7 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Experiment2.View.Pages.PageTask"
-     xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       mc:Ignorable="d"
       d:DesignHeight="700"
       d:DesignWidth="900"
@@ -20,8 +20,7 @@
                Source="/Images/ai_g_img_2025-03-14_1741972070942_316.png"
                Stretch="UniformToFill"/>
 
-        <Border Grid.Column="0"
-                Background="#FDFDFD"
+        <Border Background="#FDFDFD"
                 CornerRadius="15"
                 Width="150"
                 Height="600"
@@ -56,7 +55,7 @@
                 Effect="{StaticResource MaterialDesignElevationShadow1}"
                 Width="450"
                 Height="300"
-                Margin="306,249,0,0" Grid.ColumnSpan="2">
+                Margin="300,240,0,0" Grid.ColumnSpan="2">
             <StackPanel HorizontalAlignment="Center"
                         VerticalAlignment="Center">
 
@@ -70,7 +69,7 @@
                     <TextBox Width="280"
                              Foreground="White"
                              FontSize="20"
-                             x:Name="TbIndex"
+                             x:Name="Tbi"   
                              materialDesign:HintAssist.Hint="Введите почтовый индекс"
                              materialDesign:TextFieldAssist.HasClearButton="True"
                              materialDesign:TextFieldAssist.UnderlineBrush="White"/>
@@ -161,7 +160,7 @@
                              materialDesign:TextFieldAssist.UnderlineBrush="White"/>
                 </StackPanel>
 
-                <!-- Кнопка "Получить данные" -->
+
                 <Button Background="#087373"
                         Foreground="White"
                         x:Name="BtnGetData"
