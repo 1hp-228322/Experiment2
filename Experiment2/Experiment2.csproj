@@ -18,7 +18,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Images\ai_g_img_2025-03-14_1741972070942_316.png" />
+    <Content Include="Images\ai_g_img_2025-03-14_1741972070942_316.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
 </Project>
