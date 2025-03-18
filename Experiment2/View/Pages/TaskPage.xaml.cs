@@ -14,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Experiment2.View.Pages.PageTask;
+using CourseWorkApp.View.Pages.PageTask;
 
 namespace Experiment2.View.Pages
 {
