@@ -15,9 +15,6 @@ using System.Windows.Shapes;
 
 namespace Experiment2.View.Pages.PageTask
 {
-    /// <summary>
-    /// Логика взаимодействия для Page3.xaml
-    /// </summary>
     public partial class Page3 : Page
     {
         public Page3()
