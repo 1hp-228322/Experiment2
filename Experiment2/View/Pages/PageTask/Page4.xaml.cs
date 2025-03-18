@@ -13,16 +13,80 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Experiment2.View.Pages.PageTask
+using System;
+using System.Windows;
+using System.Windows.Controls;
+
+namespace CourseWorkApp.View.Pages.PageTask
 {
-    /// <summary>
-    /// Логика взаимодействия для Page4.xaml
-    /// </summary>
     public partial class Page4 : Page
     {
+        #region Исходные данные
+        private int[,] _sourceArray = new int[5, 4]; 
+        private int n, m, t; 
+        #endregion
+
         public Page4()
         {
             InitializeComponent();
+            InitializeArray(); 
         }
+
+        #region Инициализация массива
+        private void InitializeArray()
+        {
+            Random random = new Random();
+            TbSourceArray.Text = ""; 
+
+            for (n = 0; n < 5; n++)
+            {
+                for (m = 0; m < 4; m++)
+                {
+                    _sourceArray[n, m] = random.Next(10, 100); 
+                    TbSourceArray.Text += $"{_sourceArray[n, m]}\t"; 
+                }
+                TbSourceArray.Text += "\n";
+            }
+        }
+        #endregion
+
+        #region Обработка нажатия кнопки "Отсортировать массив"
+        private void BtnSortArray_Click(object sender, RoutedEventArgs e)
+        {
+            SpSortedArray.Visibility = Visibility.Visible; 
+            TbSortedArray.Text = ""; 
+
+            m = 4; 
+            n = 5; 
+
+            
+            for (int i = 0; i < n; i++)
+            {
+                for (int j = 0; j < n - 1; j++)
+                {
+                    if (_sourceArray[i, m - 1] > _sourceArray[j, m - 1])
+                    {
+                        
+                        for (int k = 0; k < m; k++)
+                        {
+                            t = _sourceArray[i, k];
+                            _sourceArray[i, k] = _sourceArray[j, k];
+                            _sourceArray[j, k] = t;
+                        }
+                    }
+                }
+            }
+
+            
+            for (n = 0; n < 5; n++)
+            {
+                for (m = 0; m < 4; m++)
+                {
+                    TbSortedArray.Text += $"{_sourceArray[n, m]}\t"; 
+                }
+                TbSortedArray.Text += "\n";
+            }
+        }
+        #endregion
     }
 }
