@@ -14,6 +14,8 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 using System;
+using Experiment2.Core;
+using Experiment2.View.Pages;
 
 namespace CourseWorkApp.View.Pages.PageTask
 {
@@ -72,5 +74,16 @@ namespace CourseWorkApp.View.Pages.PageTask
             }
         }
         #endregion
+
+        private void BtnLogout_Click(object sender, RoutedEventArgs e)
+        {
+            if (MessageBox.Show("Вы действительно хотите выйти?",
+                                "Системное сообщение",
+                                MessageBoxButton.YesNo,
+                                MessageBoxImage.Question) == MessageBoxResult.Yes)
+            {
+                ConnectionCore.CoreFrame?.Navigate(new MainPage());
+            }
+        }
     }
 }

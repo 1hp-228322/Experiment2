@@ -15,6 +15,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Experiment2.View;
 using Experiment2;
+using Experiment2.Core;
 
 namespace Experiment2.View.Pages.PageTask
 {
@@ -63,6 +64,16 @@ namespace Experiment2.View.Pages.PageTask
                 ClearFields();
             }
         }
+        private void BtnLogout_Click(object sender, RoutedEventArgs e)
+        {
+            if (MessageBox.Show("Вы действительно хотите выйти?",
+                                "Системное сообщение",
+                                MessageBoxButton.YesNo,
+                                MessageBoxImage.Question) == MessageBoxResult.Yes)
+            {
+                ConnectionCore.CoreFrame?.Navigate(new MainPage());
+            }
+        }
 
         private void ClearFields()
         {
@@ -87,51 +98,52 @@ namespace Experiment2.View.Pages.PageTask
 
     public class Address
     {
-            private int _index;
-            private string? _country;
-            private string? _city;
-            private string? _street;
-            private string? _house;
-            private string? _apartment;
+        private int _index;
+        private string? _country;
+        private string? _city;
+        private string? _street;
+        private string? _house;
+        private string? _apartment;
 
-            public int Index
-            {
-                get => _index;
-                set => _index = value;
-            }
+        public int Index
+        {
+            get => _index;
+            set => _index = value;
+        }
 
-            public string? Country
-            {
-                get => _country;
-                set => _country = value;
-            }
+        public string? Country
+        {
+            get => _country;
+            set => _country = value;
+        }
 
-            public string? City
-            {
-                get => _city;
-                set => _city = value;
-            }
+        public string? City
+        {
+            get => _city;
+            set => _city = value;
+        }
 
-            public string? Street
-            {
-                get => _street;
-                set => _street = value;
-            }
+        public string? Street
+        {
+            get => _street;
+            set => _street = value;
+        }
 
-            public string? House
-            {
-                get => _house;
-                set => _house = value;
-            }
+        public string? House
+        {
+            get => _house;
+            set => _house = value;
+        }
 
-            public string? Apartment
-            {
-                get => _apartment;
-                set => _apartment = value;
-            }
+        public string? Apartment
+        {
+            get => _apartment;
+            set => _apartment = value;
+        }
 
 
     }
-}
+        
+} 
     
 

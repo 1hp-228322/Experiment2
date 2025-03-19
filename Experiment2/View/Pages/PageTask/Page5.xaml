@@ -25,6 +25,19 @@
                 Width="150"
                 Height="600"
                 Margin="10,50,290,50">
+                        <StackPanel>
+
+                <Button Style="{DynamicResource menuButton}"
+                        x:Name="BtnLogout"
+                        Click="BtnLogout_Click">
+                    <StackPanel>
+                        <materialDesign:PackIcon Kind="Power"
+                                                 Style="{DynamicResource menuButtonIcon}"/>
+                        <TextBlock Text="Выйти"
+                                   Style="{DynamicResource menuButtonText}"/>
+                    </StackPanel>
+                </Button>
+            </StackPanel>
         </Border>
 
         <Border Grid.Column="1"

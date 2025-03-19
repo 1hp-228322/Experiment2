@@ -16,6 +16,8 @@ using System.Windows.Shapes;
 using System;
 using System.Windows;
 using System.Windows.Controls;
+using Experiment2.Core;
+using Experiment2.View.Pages;
 
 namespace CourseWorkApp.View.Pages.PageTask
 {
@@ -85,6 +87,16 @@ namespace CourseWorkApp.View.Pages.PageTask
                     TbSortedArray.Text += $"{_sourceArray[n, m]}\t"; 
                 }
                 TbSortedArray.Text += "\n";
+            }
+        }
+        private void BtnLogout_Click(object sender, RoutedEventArgs e)
+        {
+            if (MessageBox.Show("Вы действительно хотите выйти?",
+                                "Системное сообщение",
+                                MessageBoxButton.YesNo,
+                                MessageBoxImage.Question) == MessageBoxResult.Yes)
+            {
+                ConnectionCore.CoreFrame?.Navigate(new MainPage());
             }
         }
         #endregion

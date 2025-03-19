@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Experiment2.Core;
+using Experiment2.View.Pages;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -51,6 +53,16 @@ namespace CourseWorkApp.View.Pages.PageTask
             for (int i = 0; i < _newArray?.Length; i++)
             {
                 TbNewArray.Text += $" {_newArray[i]}"; 
+            }
+        }
+        private void BtnLogout_Click(object sender, RoutedEventArgs e)
+        {
+            if (MessageBox.Show("Вы действительно хотите выйти?",
+                                "Системное сообщение",
+                                MessageBoxButton.YesNo,
+                                MessageBoxImage.Question) == MessageBoxResult.Yes)
+            {
+                ConnectionCore.CoreFrame?.Navigate(new MainPage());
             }
         }
         #endregion
